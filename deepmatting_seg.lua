@@ -116,7 +116,7 @@ local function main(params)
   -- load matting laplacian
   local CSR_fn = 'gen_laplacian/Input_Laplacian_'..tostring(params.patch)..'x'..tostring(params.patch)..'_1e-7_CSR' .. tostring(index) .. '.mat'
   print('loading matting laplacian...', CSR_fn)
-  local CSR = matio.load(CSR_fn).CSR:cuda()
+  local CSR = matio.load(CSR_fn).data.CSR:cuda()
 
   paths.mkdir(tostring(params.serial))
   print('Exp serial:', params.serial)
