@@ -2,7 +2,7 @@ import os
 import math
 
 # number of GPUs available
-numGpus = 8
+numGpus = 1
 
 # number of image pairs to process
 numImgs = 60
